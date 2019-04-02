@@ -1,0 +1,125 @@
+.container {
+  max-width: $max_width_value;
+  margin: 2rem auto;
+  @include flex("", space-between, flex-start, "", "");
+
+  @include responsive(tablet, "") {
+    @include flex(column, space-between, flex-start, "", "");
+    width: 90%;
+  }
+
+  .income,
+  .expenses {
+    width: 45%;
+    font-size: 1.6rem;
+    @include responsive(tablet, "") {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+
+    &__list {
+      .item {
+        @include flex("", space-between, center, "", "");
+        padding: 1.4rem;
+        border-bottom: 1px solid #e7e7e7;
+
+        &:hover .item__delete--btn {
+          display: block;
+        }
+
+        &:hover .item__value {
+          transform: translateX(-20px);
+        }
+
+        &:hover .item__percentage {
+          transform: translateX(-20px);
+        }
+
+        &:first-child {
+          border-top: 1px solid #e7e7e7;
+        }
+
+        &:nth-child(even) {
+          background-color: #f7f7f7;
+        }
+
+        &__value {
+          transition: transform 0.3s;
+        }
+
+        &__percentage {
+          margin-left: 2rem;
+          transition: transform 0.3s;
+          font-size: 1.2rem;
+          background-color: #FFDAD9;
+          padding: 3px;
+          border-radius: 3px;
+          text-align: center;
+        }
+
+        &__delete--btn {
+          color: #28B9B5;
+          font-size: 2.2rem;
+          background: none;
+          border: none;
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1;
+          display: none;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:active {
+            transform: translateY(2px);
+          }
+
+
+        }
+      }
+
+      .right {
+        
+        @include flex("", space-between, center, "", "");
+      }
+    }
+  }
+
+  .income {
+    &__title {
+      color: #000046;
+    }
+
+    .item {
+
+      &__value,
+      &__delete--btn {
+        color: #28B9B5;
+      }
+    }
+  }
+
+  .expenses {
+    &__title {
+      color: #FF5049;
+    }
+
+    .item {
+
+      &__value,
+      &__percentage,
+      &__delete--btn {
+        color: #FF5049;
+      }
+    }
+  }
+}

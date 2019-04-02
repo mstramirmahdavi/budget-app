@@ -1,0 +1,85 @@
+.bottom {
+  .add {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+
+    &__container {
+      margin: 0 auto;
+      text-align: center;
+      @include flex("", center, flex-start, "", "");
+      @include responsive(tablet, "") {
+        @include flex(column, space-between, center, "", "");
+        width: 90%;
+      }
+    }
+
+    &__type:focus,
+    &__description:focus,
+    &__value:focus {
+      outline: none;
+      border: 1px solid #28B9B5;
+    }
+
+    &__type {
+      width: 5rem;
+      border: 1px solid #e7e7e7;
+      height: 4rem;
+      font-size: 2rem;
+      color: inherit;
+      background-color: #fff;
+      margin-right: 1rem;
+      font-weight: 300;
+      transition: border 0.3s;
+      outline: none;
+      border-radius: 1rem;
+      box-shadow: $shadow;
+      @include responsive(tablet, "") {
+        width: 90%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__description,
+    &__value {
+      border: 1px solid #e7e7e7;
+      background-color: #fff;
+      color: inherit;
+      font-family: inherit;
+      font-size: 1.5rem;
+      padding: 0 1.5rem;
+      height: 4rem;
+      margin-right: 1rem;
+      border-radius: .5rem;
+      transition: border 0.3s;
+      outline: none;
+      border-radius: 1rem;
+      box-shadow: $shadow;
+      @include responsive(tablet, "") {
+        width: 90%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__btn {
+      font-size: 3.5rem;
+      background: none;
+      border: none;
+      color: #28B9B5;
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.1;
+      margin-left: 1rem;
+      outline: none;
+      @include responsive(tablet, "") {
+        margin-left: 0rem;
+      }
+
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+  }
+
+}

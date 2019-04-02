@@ -68,25 +68,25 @@
 
   @else {
     @if $breakpoint==phone {
-      @media only screen and (max-width: 60rem) {
+      @media only screen and (max-width: 600px) {
         @content;
       }
     }
 
     @if $breakpoint==tablet {
-      @media only screen and (max-width: 90rem) {
+      @media only screen and (max-width: 1200px) {
         @content;
       }
     }
 
     @if $breakpoint==desktop {
-      @media only screen and (max-width: 119rem) {
+      @media only screen and (max-width: 1400px) {
         @content;
       }
     }
 
     @if $breakpoint==bigscreen {
-      @media only screen and (min-width: 119rem) {
+      @media only screen and (min-width: 1400px) {
         @content;
       }
     }
