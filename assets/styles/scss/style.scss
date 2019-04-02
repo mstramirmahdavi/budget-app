@@ -1,0 +1,100 @@
+/* 
+  => Author : Seyed Amir Mahdavi
+  => Email : seyedamirmahdavi1996@gmail.com
+
+
+  => Guide : [
+    npm install ( to install all devDependencies )
+
+    to deploy or change 
+    npm run watch:scss ( to compile scss files to css on scss files changed )
+
+
+    to compile step by step manually
+    -- npm run compile:scss ( to compile scss files to css just once )
+    -- npm run concat:css ( to concat all files together ==== if you want add your own style file so you have to change path in package.json fot concat option ====)
+    -- npm run prefix:css ( to support for all old and modern browsers )
+    -- npm run compress:css ( to minify final css file )
+
+
+    to run all command above 
+    -- npm run build:css 
+  ]
+*/
+
+/* Abstract 
+  => nothing generate from this files
+  => all variables , functions , mixins are here
+*/
+
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+
+/* Base
+ => all general styles is here 
+*/
+
+
+//reset
+@import "./base/reset";
+
+//typography
+@import "./base/typography";
+
+//grid
+@import "./base/grid";
+
+/* Layouts
+  => styles that used in all pages
+*/
+
+//header
+@import "./layouts/header";
+
+//footer
+@import "./layouts/footer";
+
+/* Components
+  => more specific styles
+*/
+
+//inputs
+@import "./components/inputstyle";
+
+//buttons
+@import "./components/buttons";
+
+//megamenu
+@import "./components/megamenu";
+
+//register and login modal
+@import "./components/registerloginmodal";
+
+//discounted
+@import "./components/discounted";
+
+//heroSlider
+@import "./components/heroSlider";
+
+//hotoffers
+@import "./components/hotOffers";
+
+//productCard
+@import "./components/productCard";
+
+//specialCard
+@import "./components/specialCard";
+
+//dailyofferCard
+@import "./components/dailyofferCard";
+
+//blogCard
+@import "./components/blogCard";
+
+/* pages
+  => styles for specific pages
+*/
+
+//home
+@import "./pages/home";

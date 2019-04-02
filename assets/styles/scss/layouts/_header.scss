@@ -1,0 +1,188 @@
+.header {
+  width: 100%;
+  @include flex(column, center, "", "", "");
+
+  &__descriptions {
+    width: 100%;
+    height: 4rem;
+    @include flex("", "", center, "", "");
+    font-size: 1.1rem;
+
+    &--item {
+      @include flex("", center, center, 0 0 20%, "");
+      border-bottom: 1px solid $default_gary_color;
+      padding: .6rem;
+
+      &:hover {
+        background-color: $default_gary_color;
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid $default_gary_color;
+      }
+
+      span[class^="icon-"] {
+        font-size: 2.5rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__mainContent {
+    width: 100%;
+    @include flex("", "", "", "", wrap);
+    height: 8rem;
+
+    &--logo {
+      @include flex("", "", center, 0 0 10%, wrap);
+
+      img {
+        height: 7rem;
+      }
+    }
+
+    &--seacrh {
+      @include flex("", center, center, 0 0 65%, "");
+
+      input,
+      select,
+      button {
+        border: none;
+        outline: none;
+        height: 4rem;
+        padding: 1rem;
+        color: $primary_gary_color;
+        background-color: $default_gary_color;
+        font-size: 1.2rem;
+      }
+
+      select {
+        width: 20%;
+      }
+
+      input {
+        width: 60%;
+        padding: 0 2rem;
+        position: relative;
+
+        &::placeholder {
+          color: $primary_gary_color;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100px;
+          left: 0;
+          height: 90%;
+          background-color: $primary_gary_color;
+        }
+      }
+
+      button {
+        background-color: $default_red_color;
+        @include flex("", center, center, "", "");
+        color: $white_color;
+        font-size: 2rem;
+      }
+    }
+
+    &--login {
+      @include flex("", center, center, 0 0 10%, "");
+
+
+      button {
+        font-size: 1.1rem;
+
+        &:hover .loginAndRegisterModal {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0rem);
+        }
+      }
+
+      span[class^="icon-"] {
+        font-size: 1rem;
+      }
+
+    }
+
+    &--basket {
+      @include flex("", flex-end, center, 0 0 15%, "");
+
+      .button {
+        color: $default_red_color;
+        padding: 1rem 0rem;
+        font-size: 1.1rem;
+        @include flex("", center, center, "", "");
+        overflow: hidden;
+
+
+        span {
+          margin: 0 1rem;
+
+          &.counter {
+            border-radius: 50%;
+            background-color: $default_red_color;
+            color: $white_color;
+            @include flex("", center, center, "", "");
+            width: 2rem;
+            height: 2rem;
+          }
+
+          &[class^="icon-"] {
+            font-size: 2rem;
+            margin-right: 1rem;
+          }
+        }
+
+      }
+    }
+  }
+
+  &__navigation {
+    width: 100%;
+    background-color: $header_default_gary_color;
+
+
+    nav {
+      @include flex("", space-between, center, "", "");
+      height: 4rem;
+      position: relative;
+
+      ul.menu,
+      ul.special {
+        @include flex("", space-between, center, "", "");
+        height: 100%;
+        font-size: 1.3rem;
+
+        >li {
+          height: 100%;
+          border-bottom: 3px solid transparent;
+          padding-top: 3px;
+
+          &:hover {
+            background-color: $header_hover_gary_color;
+            border-bottom: 3px solid $default_red_color;
+
+            .megamenu {
+              visibility: visible;
+              opacity: 1;
+              z-index: 3;
+            }
+          }
+
+          >a {
+            color: $white_color;
+            padding: 0 1rem;
+            height: 100%;
+            width: 100%;
+            @include flex("", center, center, "", "");
+            box-sizing: border-box;
+
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.productCard {
+  align-self: flex-start;
+  width: 25rem;
+  @include flex(column, "", center, "", "");
+  padding: 1rem;
+  margin: 1rem 0 4rem .5rem;
+  transition: box-shadow .4s;
+
+  &:not(:nth-child(4n)) {
+    margin-right: 5.5rem;
+  }
+
+  &:hover {
+    box-shadow: $box_shadow;
+  }
+
+  .image {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .price {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+
+  .title {
+    color: $font_gray_color;
+    font-size: 1.1rem;
+    padding: 1rem 0 0;
+  }
+
+  .subtitle {
+    color: $font_gray_color;
+    font-size: 1.1rem;
+    padding: 0 0 1rem;
+  }
+
+  .orderBtn {
+    font-size: 1.3rem;
+    transform: translateY(110%);
+
+    .button {
+      padding: .5rem 4rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}

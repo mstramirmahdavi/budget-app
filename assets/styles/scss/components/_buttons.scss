@@ -1,0 +1,48 @@
+.btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &.red_bordered {
+    border: 1px solid $default_red_color;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      background-color: $default_red_color;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) skewX(-40deg);
+      transition: .5s;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $white_color;
+
+      &::after {
+        width: 200%;
+      }
+    }
+  }
+
+  &.loginBtn {
+    height: 4rem;
+    position: relative;
+  }
+
+  &.red_btn {
+    background-color: $default_red_color;
+    color: $white_color;
+  }
+
+  &.green_btn {
+    background-color: $default_green_color;
+    color: $white_color;
+  }
+}

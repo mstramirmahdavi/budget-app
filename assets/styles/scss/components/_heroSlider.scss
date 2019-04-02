@@ -1,0 +1,51 @@
+.heroSlider {
+  width: 100%;
+  height: calc(100vh - 16rem);
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    @include flex("", center, center, "", "");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba($color: $black_color, $alpha: .40)
+    }
+
+    .content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+
+      &__title {
+        color: $white_color;
+        font-size: 4rem;
+      }
+
+      &__secondtitle {
+        color: $white_color;
+        font-size: 3rem;
+      }
+
+      &__subtitle {
+        color: $slider_yellow_color;
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+#main_slider .owl-stage-outer,
+#main_slider .owl-stage,
+#main_slider .owl-item {
+  height: 100%;
+}

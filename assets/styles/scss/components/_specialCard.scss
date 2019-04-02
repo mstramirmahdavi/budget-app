@@ -1,0 +1,88 @@
+.specialCard {
+  width: 30rem;
+  background-color: $white_color;
+  @include flex(column, '', center, '', '');
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0.15rem;
+  box-shadow: $box_shadow;
+  position: relative;
+
+  .special-headerbg {
+    width: 100%;
+    height: 16rem;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('./../../images/img/brilliant-seamless-pattern-diamond-triangle-vector-11685959.jpg');
+      background-position: center;
+      background-size: 9rem;
+      opacity: 0.3;
+    }
+  }
+
+  .special-header {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: $white_color;
+    position: relative;
+    z-index: 1;
+  }
+
+  .special-image {
+    position: relative;
+    z-index: 1;
+
+    img {
+      width: 100%;
+    }
+
+    .button {
+      width: 15rem;
+      padding: 1rem;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 10.5rem;
+      font-size: 1.5rem;
+      color: $white_color;
+      text-transform: uppercase;
+      transform: translate(-50%, 0%);
+    }
+  }
+
+  .special-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+
+  .special-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: $font_gray_color;
+  }
+
+  .special-details {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: $font_gray_color;
+    margin-bottom: 2rem;
+  }
+
+  .special-share {
+    font-size: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

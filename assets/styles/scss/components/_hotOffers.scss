@@ -1,0 +1,55 @@
+.hot-offres {
+  width: 100%;
+  @include flex("", center, center, "", "");
+  padding: 3rem 0;
+  position: relative;
+
+  &_title {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40rem;
+      height: 4px;
+      background-color: $black_color;
+    }
+  }
+
+  &_content {
+    .owl-nav {
+      position: absolute;
+      top: -7%;
+      right: 0;
+      display: block;
+      width: 9rem;
+      font-size: 3rem;
+
+      button {
+        outline: none;
+      }
+
+      .owl-prev {
+        left: 5px;
+        width: 3rem;
+        height: 3rem;
+      }
+
+      .owl-next {
+        right: 5px;
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+
+    &--container {
+      @include flex("", "", "", 0 0 100%, wrap);
+    }
+  }
+}

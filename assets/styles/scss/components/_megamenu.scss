@@ -1,0 +1,253 @@
+.megamenu {
+  width: 100%;
+  background-color: $header_megamenu_gary_color;
+  position: absolute;
+  padding: 1rem;
+  left: 0;
+  top: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  transition: all .3s;
+
+  &.simple-mega {
+    @include flex("", "", "", "", wrap);
+
+    .column {
+      @include flex(column, "", "", 1 0 25rem, "");
+      padding: 1rem;
+      color: $white_color;
+
+      &-header {
+        font-size: 1.4rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $default_red_color;
+      }
+
+      &-content {
+        padding-top: 1rem;
+        font-size: 1.3rem;
+
+        >ul {
+          >li {
+            padding: .6rem 0;
+
+            >a {
+              color: $white_color;
+              padding: .5rem 0;
+              position: relative;
+
+              &:hover {
+                color: $default_red_color;
+
+                &::after {
+                  width: 100%;
+                }
+              }
+
+              &::after {
+                content: '';
+                width: 0%;
+                height: 2px;
+                background-color: $default_red_color;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: .3s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.product-mega {
+    @include flex("", "", "", "", wrap);
+
+    .column {
+      @include flex(column, "", "", 1 0 25rem, "");
+      color: $white_color;
+
+      .link {
+        padding: 1rem;
+      }
+
+      &-header {
+        font-size: 1.4rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $default_red_color;
+      }
+
+      &-content {
+        padding-top: 1rem;
+        font-size: 1.3rem;
+
+        >ul {
+          >li {
+            padding: .6rem 0;
+
+            >a {
+              color: $white_color;
+              padding: .5rem 0;
+              position: relative;
+
+              &:hover {
+                color: $default_red_color;
+
+                &::after {
+                  width: 100%;
+                }
+              }
+
+              &::after {
+                content: '';
+                width: 0%;
+                height: 2px;
+                background-color: $default_red_color;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: .3s;
+              }
+            }
+          }
+        }
+      }
+
+      .card {
+        width: 100%;
+        background-color: $header_secondery_megamenu_gary_color;
+        text-align: center;
+        padding: 1rem;
+        border: 1px solid $header_products_megamenu_gary_color;
+
+        img {
+          width: 12rem;
+        }
+
+        .title {
+          color: $primary_gary_color;
+          padding: 1rem;
+          font-size: 1.5rem;
+        }
+
+        .price {
+          font-size: 2rem;
+          padding-bottom: 1rem;
+        }
+
+        .buttons {
+          font-size: 1.5rem;
+
+          .button {
+            width: 60%;
+            display: block;
+            margin: 0 auto;
+            padding: .5rem 0;
+
+            &:not(:last-child) {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.megaproduct {
+    @include flex("", "", "", "", wrap);
+
+    .heroproduct {
+      @include flex(column, center, "", 0 0 40rem, "");
+      background-color: $header_secondery_megamenu_gary_color;
+      text-align: center;
+      padding: 1rem;
+      border: 1px solid$header_products_megamenu_gary_color;
+
+      img {
+        width: 20rem;
+        align-self: center;
+      }
+
+      .title {
+        color: $primary_gary_color;
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .price {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        color: $white_color;
+      }
+
+      .buttons {
+        font-size: 1.5rem;
+
+        .button {
+          width: 60%;
+          display: block;
+          margin: 0 auto;
+          padding: .5rem 0;
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+
+    .link {
+      @include flex("", "", "", 0 0 78rem, wrap);
+
+      .column {
+        @include flex(column, "", "", 1 0 25rem, "");
+        padding: 1rem;
+        color: $white_color;
+
+        &-header {
+          font-size: 1.4rem;
+          padding-bottom: 1rem;
+          border-bottom: 2px solid $default_red_color;
+        }
+
+        &-content {
+          padding-top: 1rem;
+          font-size: 1.3rem;
+
+          >ul {
+            >li {
+              padding: .6rem 0;
+
+              >a {
+                color: $white_color;
+                padding: .5rem 0;
+                position: relative;
+
+                &:hover {
+                  color: $default_red_color;
+
+                  &::after {
+                    width: 100%;
+                  }
+                }
+
+                &::after {
+                  content: '';
+                  width: 0%;
+                  height: 2px;
+                  background-color: $default_red_color;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  transition: .3s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

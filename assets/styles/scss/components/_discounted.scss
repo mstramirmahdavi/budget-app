@@ -1,0 +1,15 @@
+.discounted {
+  position: relative;
+  color: $default_red_color;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 110%;
+    background-color: $border_gary_color;
+    transform: rotate(25deg);
+    top: 0;
+    transform-origin: 0;
+  }
+}
