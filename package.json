@@ -1,17 +1,17 @@
 {
-  "name": "ecommerce",
+  "name": "budget-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "watch:scss": "node-sass assets/styles/scss/style.scss assets/styles/css/style.css -w",
     "compile:scss": "node-sass assets/styles/scss/style.scss assets/styles/css/style.comp.css",
-    "concat:css": "concat -o assets/styles/css/style.concat.css  assets/styles/css/owl.carousel.min.css assets/styles/css/owl.theme.default.min.css assets/styles/css/style.comp.css assets/styles/css/style-icons.css",
+    "concat:css": "concat -o assets/styles/css/style.concat.css  assets/styles/css/owl.carousel.min.css assets/styles/css/owl.theme.default.min.css assets/styles/css/style.comp.css assets/styles/css/ion-font.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" assets/styles/css/style.concat.css -o assets/styles/css/style.prefix.css",
     "compress:css": "node-sass assets/styles/css/style.prefix.css assets/styles/css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:scss concat:css prefix:css compress:css"
   },
-  "author": "Seyed Amir Mahdavi & Shahin Attaei",
+  "author": "Seyed Amir Mahdavi",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.4.6",

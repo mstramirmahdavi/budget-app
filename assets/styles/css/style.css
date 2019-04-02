@@ -74,14 +74,12 @@ ul {
   list-style: none; }
 
 @font-face {
-  font-family: "MyriadPro";
-  src: url("./../../fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("./../../fonts/MyriadPro-Regular.otf") format("opentype"), url("./../../fonts/MyriadPro-Regular.woff") format("woff"), url("./../../fonts/MyriadPro-Regular.ttf") format("truetype"), url("./../../fonts/MyriadPro-Regular.svg#MyriadPro-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: "OpenSans";
+  src: url("./../../fonts/OpenSans-Regular.ttf") format("truetype"); }
 
 html,
 body {
-  font-family: "MyriadPro"; }
+  font-family: "OpenSans"; }
 
 .row {
   max-width: 120rem;
