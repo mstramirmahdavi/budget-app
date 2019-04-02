@@ -1,4 +1,5 @@
 .top {
+  background-image: linear-gradient(120deg, #000046, #1CB5E0);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -6,7 +7,7 @@
   @include flex("", center, center, "", "");
 
   &.blue {
-    background-image: linear-gradient(120deg, #000046, #1CB5E0);
+    background-image: linear-gradient(120deg, #00c921, #1CB5E0);
   }
 
   &.red {

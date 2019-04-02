@@ -345,9 +345,12 @@ body,
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
-  @media only screen and (min-width: 119rem) {
+  @media only screen and (min-width: 1400px) {
     html {
       font-size: 81.25%; } }
+  @media only screen and (max-width: 1200px) {
+    html {
+      font-size: 112.5%; } }
 
 *,
 *:before,
@@ -361,14 +364,12 @@ ul {
   list-style: none; }
 
 @font-face {
-  font-family: "MyriadPro";
-  src: url("./../../fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("./../../fonts/MyriadPro-Regular.otf") format("opentype"), url("./../../fonts/MyriadPro-Regular.woff") format("woff"), url("./../../fonts/MyriadPro-Regular.ttf") format("truetype"), url("./../../fonts/MyriadPro-Regular.svg#MyriadPro-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: "OpenSans";
+  src: url("./../../fonts/OpenSans-Regular.ttf") format("truetype"); }
 
 html,
 body {
-  font-family: "MyriadPro"; }
+  font-family: "OpenSans"; }
 
 .row {
   max-width: 120rem;
@@ -381,23 +382,227 @@ body {
 /* Components
   => more specific styles
 */
+.top {
+  background-image: linear-gradient(120deg, #000046, #1CB5E0);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .top.blue {
+    background-image: linear-gradient(120deg, #00c921, #1CB5E0); }
+  .top.red {
+    background-image: linear-gradient(120deg, #f80759, #bc4e9c); }
+  .top .budget {
+    color: #fff; }
+    @media only screen and (max-width: 1200px) {
+      .top .budget {
+        width: 70%; } }
+    .top .budget__title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 300; }
+    .top .budget__value {
+      font-weight: 300;
+      font-size: 4.6rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: 2px; }
+    .top .budget__income, .top .budget__expenses {
+      padding: 1rem;
+      text-transform: uppercase;
+      background-color: rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+      border-radius: 1rem; }
+      .top .budget__income .right, .top .budget__expenses .right {
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      .top .budget__income--percentage, .top .budget__expenses--percentage {
+        padding: .1rem .5rem;
+        margin-left: 1rem;
+        background-color: rgba(255, 255, 255, 0.2);
+        text-align: center;
+        border-radius: .5rem; }
+    .top .budget__income {
+      margin-bottom: 2rem; }
+
+.bottom .add {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e7e7e7;
+  background-color: #f7f7f7; }
+  .bottom .add__container {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; }
+    @media only screen and (max-width: 1200px) {
+      .bottom .add__container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        width: 90%; } }
+  .bottom .add__type:focus, .bottom .add__description:focus, .bottom .add__value:focus {
+    outline: none;
+    border: 1px solid #28B9B5; }
+  .bottom .add__type {
+    width: 5rem;
+    border: 1px solid #e7e7e7;
+    height: 4rem;
+    font-size: 2rem;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 1rem;
+    font-weight: 300;
+    transition: border 0.3s;
+    outline: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 1rem #e4e4e4; }
+    @media only screen and (max-width: 1200px) {
+      .bottom .add__type {
+        width: 90%;
+        margin-bottom: 1rem; } }
+  .bottom .add__description, .bottom .add__value {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    height: 4rem;
+    margin-right: 1rem;
+    border-radius: .5rem;
+    transition: border 0.3s;
+    outline: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 1rem #e4e4e4; }
+    @media only screen and (max-width: 1200px) {
+      .bottom .add__description, .bottom .add__value {
+        width: 90%;
+        margin-bottom: 1rem; } }
+  .bottom .add__btn {
+    font-size: 3.5rem;
+    background: none;
+    border: none;
+    color: #28B9B5;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 1rem;
+    outline: none; }
+    @media only screen and (max-width: 1200px) {
+      .bottom .add__btn {
+        margin-left: 0rem; } }
+    .bottom .add__btn:active {
+      transform: translateY(2px); }
+
+.container {
+  max-width: 120rem;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  @media only screen and (max-width: 1200px) {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 90%; } }
+  .container .income,
+  .container .expenses {
+    width: 45%;
+    font-size: 1.6rem; }
+    @media only screen and (max-width: 1200px) {
+      .container .income,
+      .container .expenses {
+        width: 100%;
+        margin-bottom: 2rem; } }
+    .container .income h2,
+    .container .expenses h2 {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 15px; }
+    .container .income__list .item,
+    .container .expenses__list .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem;
+      border-bottom: 1px solid #e7e7e7; }
+      .container .income__list .item:hover .item__delete--btn,
+      .container .expenses__list .item:hover .item__delete--btn {
+        display: block; }
+      .container .income__list .item:hover .item__value,
+      .container .expenses__list .item:hover .item__value {
+        transform: translateX(-20px); }
+      .container .income__list .item:hover .item__percentage,
+      .container .expenses__list .item:hover .item__percentage {
+        transform: translateX(-20px); }
+      .container .income__list .item:first-child,
+      .container .expenses__list .item:first-child {
+        border-top: 1px solid #e7e7e7; }
+      .container .income__list .item:nth-child(even),
+      .container .expenses__list .item:nth-child(even) {
+        background-color: #f7f7f7; }
+      .container .income__list .item__value,
+      .container .expenses__list .item__value {
+        transition: transform 0.3s; }
+      .container .income__list .item__percentage,
+      .container .expenses__list .item__percentage {
+        margin-left: 2rem;
+        transition: transform 0.3s;
+        font-size: 1.2rem;
+        background-color: #FFDAD9;
+        padding: 3px;
+        border-radius: 3px;
+        text-align: center; }
+      .container .income__list .item__delete--btn,
+      .container .expenses__list .item__delete--btn {
+        color: #28B9B5;
+        font-size: 2.2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        display: none; }
+        .container .income__list .item__delete--btn:focus,
+        .container .expenses__list .item__delete--btn:focus {
+          outline: none; }
+        .container .income__list .item__delete--btn:active,
+        .container .expenses__list .item__delete--btn:active {
+          transform: translateY(2px); }
+    .container .income__list .right,
+    .container .expenses__list .right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+  .container .income__title {
+    color: #000046; }
+  .container .income .item__value, .container .income .item__delete--btn {
+    color: #28B9B5; }
+  .container .expenses__title {
+    color: #FF5049; }
+  .container .expenses .item__value, .container .expenses .item__percentage, .container .expenses .item__delete--btn {
+    color: #FF5049; }
+
 /* pages
   => styles for specific pages
 */
 
-@charset "UTF-8";
-
-/*!
-  Ionicons, v2.0.1
-  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
-  https://twitter.com/benjsperry  https://twitter.com/ionicframework
-  MIT License: https://github.com/driftyco/ionicons
-
-  Android-style icons originally built by Google’s
-  Material Design Icons: https://github.com/google/material-design-icons
-  used under CC BY http://creativecommons.org/licenses/by/4.0/
-  Modified icons to fit ionicon’s grid from original.
-*/
 @font-face {
   font-family: "Ionicons";
   src: url("../../fonts/ionicons.eot?v=2.0.1");
