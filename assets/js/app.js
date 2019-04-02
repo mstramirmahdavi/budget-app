@@ -140,7 +140,8 @@ var UIController = (function () {
     expensesLabel: '.budget__expenses--value',
     percentageLabel: '.budget__expenses--percentage',
     expensesPercentageLabel: '.item__percentage',
-    dateLabel: '.budget__title--month'
+    dateLabel: '.budget__title--month',
+    topRow: '.top'
   }
   var formatNumber = function (num, type) {
     var numSplit, int, dec, sign;
@@ -272,11 +273,26 @@ var UIController = (function () {
         DOMstrings.inputValue
       );
 
-      nodeListForEach(fields, function(cur) {
+      nodeListForEach(fields, function (cur) {
         cur.classList.toggle('red-focus');
       });
 
       document.querySelector(DOMstrings.inputBtn).classList.toggle('red')
+    },
+
+    checkbudget: function () {
+
+      var budgetValue = budgetController.getBudget().budget;
+
+      if (budgetValue > 0) {
+        document.querySelector(DOMstrings.topRow).classList.add('blue');
+      } else if (budgetValue < 0) {
+        document.querySelector(DOMstrings.topRow).classList.add('red');
+      } else {
+        document.querySelector(DOMstrings.topRow).classList.remove('red');
+        document.querySelector(DOMstrings.topRow).classList.remove('blue');
+      }
+
     },
 
     getDOMString: function () {
@@ -307,6 +323,7 @@ var Controller = (function (bugetCtrl, UICtrl) {
     var budget = bugetCtrl.getBudget();
     // 3. Display the budget on the UI
     UICtrl.displayBudget(budget);
+    UICtrl.checkbudget();
 
   };
 
@@ -376,6 +393,7 @@ var Controller = (function (bugetCtrl, UICtrl) {
       });
       setupEventListeners();
       UICtrl.displayMonth();
+      UICtrl.checkbudget();
     }
   };
 
