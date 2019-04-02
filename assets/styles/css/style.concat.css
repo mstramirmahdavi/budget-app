@@ -434,6 +434,12 @@ body {
     .top .budget__income {
       margin-bottom: 2rem; }
 
+.red {
+  color: #FF5049 !important; }
+
+.red-focus:focus {
+  border: 1px solid #FF5049 !important; }
+
 .bottom .add {
   padding: 1.5rem;
   border-bottom: 1px solid #e7e7e7;
@@ -453,7 +459,7 @@ body {
         width: 90%; } }
   .bottom .add__type:focus, .bottom .add__description:focus, .bottom .add__value:focus {
     outline: none;
-    border: 1px solid #28B9B5; }
+    border: 1px solid #1CB5E0; }
   .bottom .add__type {
     width: 5rem;
     border: 1px solid #e7e7e7;
@@ -493,7 +499,7 @@ body {
     font-size: 3.5rem;
     background: none;
     border: none;
-    color: #28B9B5;
+    color: #1CB5E0;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;

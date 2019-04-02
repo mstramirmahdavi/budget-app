@@ -1,3 +1,11 @@
+.red {
+  color: #FF5049 !important;
+}
+
+.red-focus:focus {
+  border: 1px solid #FF5049 !important;
+}
+
 .bottom {
   .add {
     padding: 1.5rem;
@@ -8,6 +16,7 @@
       margin: 0 auto;
       text-align: center;
       @include flex("", center, flex-start, "", "");
+
       @include responsive(tablet, "") {
         @include flex(column, space-between, center, "", "");
         width: 90%;
@@ -18,7 +27,7 @@
     &__description:focus,
     &__value:focus {
       outline: none;
-      border: 1px solid #28B9B5;
+      border: 1px solid #1CB5E0;
     }
 
     &__type {
@@ -34,6 +43,7 @@
       outline: none;
       border-radius: 1rem;
       box-shadow: $shadow;
+
       @include responsive(tablet, "") {
         width: 90%;
         margin-bottom: 1rem;
@@ -55,6 +65,7 @@
       outline: none;
       border-radius: 1rem;
       box-shadow: $shadow;
+
       @include responsive(tablet, "") {
         width: 90%;
         margin-bottom: 1rem;
@@ -65,13 +76,14 @@
       font-size: 3.5rem;
       background: none;
       border: none;
-      color: #28B9B5;
+      color: #1CB5E0;
       cursor: pointer;
       display: inline-block;
       vertical-align: middle;
       line-height: 1.1;
       margin-left: 1rem;
       outline: none;
+
       @include responsive(tablet, "") {
         margin-left: 0rem;
       }
