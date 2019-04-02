@@ -281,16 +281,20 @@ var UIController = (function () {
     },
 
     checkbudget: function () {
-
+      var clearClasses = function () {
+        document.querySelector(DOMstrings.topRow).classList.remove('red');
+        document.querySelector(DOMstrings.topRow).classList.remove('blue');
+      }
       var budgetValue = budgetController.getBudget().budget;
 
       if (budgetValue > 0) {
+        clearClasses();
         document.querySelector(DOMstrings.topRow).classList.add('blue');
       } else if (budgetValue < 0) {
+        clearClasses();
         document.querySelector(DOMstrings.topRow).classList.add('red');
       } else {
-        document.querySelector(DOMstrings.topRow).classList.remove('red');
-        document.querySelector(DOMstrings.topRow).classList.remove('blue');
+        clearClasses();
       }
 
     },
@@ -365,7 +369,6 @@ var Controller = (function (bugetCtrl, UICtrl) {
     var itemID, splitID, type, ID;
 
     itemID = e.target.parentNode.parentNode.parentNode.parentNode.id;
-    console.log(itemID);
 
     if (itemID) {
       splitID = itemID.split('-');
@@ -384,7 +387,6 @@ var Controller = (function (bugetCtrl, UICtrl) {
   }
   return {
     init: function () {
-      console.log("app is started");
       UICtrl.displayBudget({
         budget: 0,
         totalInc: 0,

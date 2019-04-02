@@ -101,6 +101,8 @@ body {
   background-position: center;
   position: relative;
   padding: 2rem;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center; }
