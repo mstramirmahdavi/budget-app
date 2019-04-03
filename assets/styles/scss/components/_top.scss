@@ -21,7 +21,7 @@
     color: #fff;
 
     @include responsive(tablet, "") {
-      width: 70%;
+      width: 100%;
     }
 
     &__title {
@@ -37,6 +37,9 @@
       text-align: center;
       margin-bottom: 2rem;
       letter-spacing: 2px;
+      @include responsive(phone, "") {
+        font-size: 3rem;
+      }
     }
 
     &__income,

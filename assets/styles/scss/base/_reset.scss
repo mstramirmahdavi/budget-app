@@ -19,6 +19,9 @@ html {
   @include responsive(tablet, "") {
     font-size: $rem_default * 1.8;
   }
+  @include responsive(phone, "") {
+    font-size: $rem_default;
+  }
 }
 
 *,

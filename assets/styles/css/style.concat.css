@@ -351,6 +351,9 @@ html {
   @media only screen and (max-width: 1200px) {
     html {
       font-size: 112.5%; } }
+  @media only screen and (max-width: 600px) {
+    html {
+      font-size: 62.5%; } }
 
 *,
 *:before,
@@ -401,7 +404,7 @@ body {
     color: #fff; }
     @media only screen and (max-width: 1200px) {
       .top .budget {
-        width: 70%; } }
+        width: 100%; } }
     .top .budget__title {
       font-size: 2rem;
       text-align: center;
@@ -413,6 +416,9 @@ body {
       text-align: center;
       margin-bottom: 2rem;
       letter-spacing: 2px; }
+      @media only screen and (max-width: 600px) {
+        .top .budget__value {
+          font-size: 3rem; } }
     .top .budget__income, .top .budget__expenses {
       padding: 1rem;
       text-transform: uppercase;
@@ -458,7 +464,7 @@ body {
         justify-content: space-between;
         flex-direction: column;
         align-items: center;
-        width: 90%; } }
+        width: 100%; } }
   .bottom .add__type:focus, .bottom .add__description:focus, .bottom .add__value:focus {
     outline: none;
     border: 1px solid #1CB5E0; }
